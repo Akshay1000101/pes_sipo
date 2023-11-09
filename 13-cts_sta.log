@@ -1,0 +1,163 @@
+OpenROAD 0a584d123190322b0725d5440c2c486d91d3afd8 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/sipo/runs/RUN_2023.11.03_09.17.27/results/cts/pes_sipo.odb'…
+define_corners Typical
+read_liberty -corner Typical /openlane/designs/sipo/src/sky130_fd_sc_hd__typical.lib
+[WARNING STA-0163] /openlane/designs/sipo/src/sky130_fd_sc_hd__typical.lib line 23, default_fanout_load is 0.0.
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/scripts/base.sdc'…
+[INFO]: Setting output delay to: 1.0
+[INFO]: Setting input delay to: 1.0
+[INFO]: Setting load to: 0.033442
+[INFO]: Setting clock uncertainty to: 0.25
+[INFO]: Setting clock transition to: 0.15
+[INFO]: Setting timing derate to: 5.0 %
+[INFO]: Setting RC values...
+min_report
+
+===========================================================================
+report_checks -path_delay min (Hold)
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+worst slack corner Typical: INF
+min_report_end
+max_report
+
+===========================================================================
+report_checks -path_delay max (Setup)
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+worst slack corner Typical: INF
+max_report_end
+checks_report
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 10 unannotated drivers.
+ b
+ clk
+ pes_sipo_1/HI
+ pes_sipo_1/LO
+ pes_sipo_2/HI
+ pes_sipo_2/LO
+ pes_sipo_3/HI
+ pes_sipo_3/LO
+ pes_sipo_4/HI
+ pes_sipo_4/LO
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 4 unconstrained endpoints.
+  q[0]
+  q[1]
+  q[2]
+  q[3]
+checks_report_end
+power_report
+
+===========================================================================
+ report_power
+============================================================================
+======================= Typical Corner ===================================
+
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Combinational          0.00e+00   0.00e+00   7.78e-11   7.78e-11 100.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  0.00e+00   0.00e+00   7.78e-11   7.78e-11 100.0%
+                           0.0%       0.0%     100.0%
+
+power_report_end
+skew_report
+
+===========================================================================
+report_clock_skew
+============================================================================
+Clock clk
+No launch/capture paths found.
+
+skew_report_end
+summary_report
+
+===========================================================================
+report_tns
+============================================================================
+tns 0.00
+
+===========================================================================
+report_wns
+============================================================================
+wns 0.00
+
+===========================================================================
+report_worst_slack -max (Setup)
+============================================================================
+worst slack INF
+
+===========================================================================
+report_worst_slack -min (Hold)
+============================================================================
+worst slack INF
+summary_report_end
+area_report
+
+===========================================================================
+report_design_area
+============================================================================
+Design area 23 u^2 3% utilization.
+area_report_end
+[WARNING] Did not save OpenROAD database!
+Writing SDF to '/openlane/designs/sipo/runs/RUN_2023.11.03_09.17.27/results/signoff/pes_sipo.sdf'…
+Writing timing model to '/openlane/designs/sipo/runs/RUN_2023.11.03_09.17.27/results/signoff/pes_sipo.lib'…
