@@ -111,3 +111,16 @@ magic -T /home/akshay/.volare/sky130A/libs.tech/magic/sky130A.tech lef ../../tmp
 ## Magic Antenna check
 ![](https://github.com/Akshay1000101/pes_sipo/blob/main/screenshots2/7.png?raw=true)
 files are in the folder screenshots2
+
+## Power Consumed
+![](https://github.com/Akshay1000101/pes_sipo/blob/main/screenshots2/8.PNG?raw=true)
+Since this a purely combinational circuit the sequential power is 0.
+
+## Timing
+The given circuit does not contain clock.
+![](https://github.com/Akshay1000101/pes_sipo/blob/main/screenshots2/5.png?raw=true)
+
+![](https://github.com/Akshay1000101/pes_sipo/blob/main/screenshots2/11.PNG?raw=true)
+
+## Area Report
+![](https://github.com/Akshay1000101/pes_sipo/blob/main/screenshots2/10.PNG?raw=true)
